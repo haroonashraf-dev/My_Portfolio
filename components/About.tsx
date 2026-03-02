@@ -71,7 +71,7 @@ const About: React.FC = () => {
             <div className="aspect-square rounded-3xl overflow-hidden border border-white/10 p-2">
               <div className="w-full h-full rounded-2xl overflow-hidden grayscale hover:grayscale-0 transition-all duration-700">
                 <img
-                  src="img/profile-photo.jpeg"
+                  src="/img/profile-photo.jpeg"
                   alt="Haroon Portrait"
                   className="w-full h-full object-cover rotate-90 py-10"
                 />
