@@ -1,19 +1,18 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { ExternalLink } from "lucide-react";
+import { ExternalLink, FileText } from "lucide-react";
 import { Link } from "react-router-dom";
-import { FileText } from "lucide-react";
 import { Project } from "../types";
 
 const projects: Project[] = [
   {
     id: "1",
-    title: "Fashion E-Commerce Store",
+    title: "TrendWave Store",
     description:
-      "A modern, conversion-focused e-commerce platform designed for fashion brands with seamless shopping experience and responsive UI.",
+      "A modern fashion e-commerce platform designed for growing clothing brands. Built with a clean UI, optimized product browsing, responsive layout, and smooth user interactions for an enhanced shopping experience.",
     image:
-      "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=800",
-    tags: ["React", "Tailwind", "Framer Motion"],
+      "https://images.unsplash.com/photo-1521334884684-d80222895322?auto=format&fit=crop&q=80&w=1400",
+    tags: ["React", "Tailwind CSS", "Framer Motion"],
     link: "#",
     details: "/fashion-details",
   },
@@ -22,29 +21,39 @@ const projects: Project[] = [
     title: "E-Learning Hub (Full-Stack SaaS)",
     description:
       "A scalable LMS that allows instructors to create and monetize courses, while students enjoy a seamless learning experience.",
-    image: "img/home.png",
+    image:
+      "https://images.unsplash.com/photo-1501504905252-473c47e087f8?auto=format&fit=crop&q=80&w=1400",
     tags: ["Next.js", "TypeScript", "Shadcn UI"],
     link: "#",
     details: "/lms-details",
   },
   {
     id: "3",
-    title: "Admin Analytics Dashboard",
+    title: "InsightBoard – Admin Analytics Dashboard",
     description:
-      "An interactive admin dashboard with dynamic data visualization, reusable components, and scalable layout for SaaS platforms.",
+      "A professional SaaS analytics dashboard designed for administrators to monitor performance metrics, user activity, and business insights. Built with modular components, structured layouts, and dynamic data visualization for scalability and clarity.",
     image:
-      "https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?auto=format&fit=crop&q=80&w=800",
-    tags: ["React", "CSS Modules"],
+      "https://images.unsplash.com/photo-1553877522-43269d4ea984?auto=format&fit=crop&q=80&w=1400",
+    tags: ["React", "CSS Modules", "Chart.js"],
     link: "#",
     details: "/dashboard-details",
   },
 ];
 
+const cardVariants = {
+  offscreen: { y: 40, opacity: 0 },
+  onscreen: { 
+    y: 0, 
+    opacity: 1, 
+    transition: { type: "spring", bounce: 0.3, duration: 0.6 } 
+  }
+};
+
 const Projects: React.FC = () => {
   return (
     <section id="projects" className="py-24">
       <div className="max-w-7xl mx-auto px-4 md:px-8">
-        {/* Section Header */}
+        {/* Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 space-y-4 md:space-y-0">
           <div>
             <h2 className="text-sm font-bold tracking-widest text-indigo-500 uppercase mb-4">
@@ -59,67 +68,64 @@ const Projects: React.FC = () => {
         </div>
 
         {/* Project Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
           {projects.map((project, idx) => (
             <motion.div
               key={project.id}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: idx * 0.1 }}
-              viewport={{ once: true }}
-              className="group bg-slate-800/20 border border-white/5 rounded-3xl overflow-hidden hover:border-indigo-500/30 transition-all"
+              variants={cardVariants}
+              initial="offscreen"
+              whileInView="onscreen"
+              viewport={{ once: true, amount: 0.3 }}
+              whileHover={{ scale: 1.05, rotateX: 3, rotateY: 3 }}
+              className="group bg-slate-800/20 border border-white/5 rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-transform duration-500 cursor-pointer"
             >
-              {/* Project Image */}
-              <div className="aspect-video overflow-hidden">
+              {/* Image */}
+              <div className="aspect-video overflow-hidden relative">
                 <img
                   src={project.image}
                   alt={project.title}
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                 />
-              </div>
-
-              {/* Project Content */}
-              <div className="p-6">
-                {/* Optional Tags */}
-                {project.tags.length > 0 && (
-                  <div className="flex flex-wrap gap-2 mb-4">
-                    {project.tags.map((tag) => (
-                      <span
-                        key={tag}
-                        className="text-[10px] font-bold uppercase tracking-wider px-2 py-1 bg-slate-700/50 text-slate-300 rounded-md"
-                      >
-                        {tag}
-                      </span>
-                    ))}
-                  </div>
-                )}
-
-                {/* Title & Description */}
-                <h4 className="text-xl font-bold mb-2">{project.title}</h4>
-                <p className="text-slate-400 text-sm leading-relaxed mb-6">
-                  {project.description}
-                </p>
-
-                {/* Action Buttons */}
-                <div className="flex items-center justify-between">
+                {/* Overlay for hover */}
+                <div className="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center gap-4">
                   <a
                     href={project.link}
-                    className="text-indigo-400 hover:text-indigo-300 transition-colors flex items-center text-sm font-semibold"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-2 px-4 py-2 bg-white text-black rounded-full font-semibold hover:scale-105 transition"
                   >
-                    <ExternalLink size={16} className="mr-1" />
+                    <ExternalLink size={16} />
                     Preview
                   </a>
-
                   {project.details && (
                     <Link
                       to={project.details}
-                      className="inline-flex items-center gap-2 text-sm font-semibold px-5 py-2 bg-indigo-600 hover:bg-indigo-500 text-white rounded-lg shadow-md hover:shadow-lg transition-all duration-300"
+                      className="flex items-center gap-2 px-4 py-2 border border-white text-white rounded-full font-semibold hover:bg-white hover:text-black transition"
                     >
                       <FileText size={16} />
                       Case Study
                     </Link>
                   )}
                 </div>
+              </div>
+
+              {/* Content */}
+              <div className="p-6">
+                <div className="flex flex-wrap gap-2 mb-4">
+                  {project.tags.map((tag) => (
+                    <span
+                      key={tag}
+                      className="text-[10px] font-bold uppercase tracking-wider px-2 py-1 bg-slate-700/50 text-slate-300 rounded-md"
+                    >
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+
+                <h4 className="text-xl font-bold mb-2">{project.title}</h4>
+                <p className="text-slate-400 text-sm leading-relaxed mb-6">
+                  {project.description}
+                </p>
               </div>
             </motion.div>
           ))}
