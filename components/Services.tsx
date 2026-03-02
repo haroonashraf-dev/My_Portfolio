@@ -1,0 +1,90 @@
+
+import React from 'react';
+import { motion } from 'framer-motion';
+import { Code2, Palette, Globe, Smartphone, Zap, Server } from 'lucide-react';
+import { Service } from '../types';
+
+const services: Service[] = [
+  {
+    id: '1',
+    title: 'React Development',
+    description: 'Custom, high-performance web applications built with the latest React features and best practices.',
+    icon: 'code'
+  },
+  {
+    id: '2',
+    title: 'Modern UI/UX Implementation',
+    description: 'Transforming designs into living, breathing interfaces with Tailwind CSS and Framer Motion.',
+    icon: 'palette'
+  },
+  {
+    id: '3',
+    title: 'Full Stack Solutions',
+    description: 'End-to-end development leveraging the MERN stack for robust and scalable applications.',
+    icon: 'server'
+  },
+  {
+    id: '4',
+    title: 'Responsive Design',
+    description: 'Ensuring your application looks and functions perfectly on every device, from mobile to ultra-wide.',
+    icon: 'smartphone'
+  },
+  {
+    id: '5',
+    title: 'Web Optimization',
+    description: 'Speed matters. I optimize assets and code to ensure lightning-fast load times and high Core Web Vitals.',
+    icon: 'zap'
+  },
+  {
+    id: '6',
+    title: 'SEO Implementation',
+    description: 'Best practices for accessibility and search engine visibility from the ground up.',
+    icon: 'globe'
+  }
+];
+
+const IconMap: Record<string, any> = {
+  code: Code2,
+  palette: Palette,
+  server: Server,
+  smartphone: Smartphone,
+  zap: Zap,
+  globe: Globe
+};
+
+const Services: React.FC = () => {
+  return (
+    <section id="services" className="py-24 bg-[#0f172a]">
+      <div className="max-w-7xl mx-auto px-4 md:px-8 text-center">
+        <h2 className="text-sm font-bold tracking-widest text-indigo-500 uppercase mb-4">What I Offer</h2>
+        <h3 className="text-3xl md:text-5xl font-bold mb-16">My Specialized Services</h3>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {services.map((service, idx) => {
+            const Icon = IconMap[service.icon];
+            return (
+              <motion.div
+                key={service.id}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: idx * 0.1 }}
+                viewport={{ once: true }}
+                className="group p-8 bg-slate-800/40 border border-white/5 rounded-3xl hover:bg-slate-800/60 hover:border-indigo-500/30 transition-all duration-300 text-left"
+              >
+                <div className="w-14 h-14 rounded-2xl bg-indigo-500/10 flex items-center justify-center text-indigo-500 mb-6 group-hover:scale-110 transition-transform">
+                  <Icon size={28} />
+                </div>
+                <h4 className="text-xl font-bold mb-4">{service.title}</h4>
+                <p className="text-slate-400 leading-relaxed">
+                  {service.description}
+                </p>
+              </motion.div>
+            );
+          })}
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default Services;
