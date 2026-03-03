@@ -30,8 +30,8 @@ const App: React.FC = () => {
                 <Hero />
                 <About />
                 <Services />
-                <Skills />
                 <Projects />
+                <Skills />
                 <Contact />
               </>
             }
