@@ -5,17 +5,17 @@ import { TypeAnimation } from 'react-type-animation';
 
 const Hero: React.FC = () => {
   return (
-   <section className="relative min-h-[80vh] md:min-h-screen flex flex-col items-center justify-center pt-16 md:pt-24 overflow-hidden bg-slate-900">
-      {/* Background Decorative Blobs */}
+    <section className="relative min-h-[80vh] md:min-h-screen flex flex-col items-center justify-center pt-16 md:pt-24 overflow-hidden bg-slate-900">
+      {/* Background Blobs */}
       <motion.div
         animate={{ rotate: 360 }}
         transition={{ repeat: Infinity, duration: 60, ease: 'linear' }}
-        className="absolute top-1/4 -left-24 w-80 h-80 bg-indigo-600/20 rounded-full blur-[120px] pointer-events-none"
+        className="absolute top-16 -left-24 w-64 h-64 md:w-80 md:h-80 bg-indigo-600/20 rounded-full blur-[120px] pointer-events-none"
       />
       <motion.div
         animate={{ rotate: -360 }}
         transition={{ repeat: Infinity, duration: 90, ease: 'linear' }}
-        className="absolute bottom-1/4 -right-24 w-80 h-80 bg-purple-600/20 rounded-full blur-[120px] pointer-events-none"
+        className="absolute bottom-16 -right-24 w-64 h-64 md:w-80 md:h-80 bg-purple-600/20 rounded-full blur-[120px] pointer-events-none"
       />
 
       <div className="relative z-10 max-w-5xl text-center px-4 md:px-8">
@@ -35,27 +35,31 @@ const Hero: React.FC = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.1 }}
-          className="text-4xl md:text-6xl font-extrabold tracking-tight mb-6 text-white"
+          className="text-3xl sm:text-4xl md:text-6xl font-extrabold tracking-tight mb-4 text-white"
         >
-          Crafting <span className="bg-clip-text text-transparent bg-gradient-to-r from-indigo-400 via-purple-500 to-pink-500">Exceptional</span> <br />
+          Crafting{' '}
+          <span className="bg-clip-text text-transparent bg-gradient-to-r from-indigo-400 via-purple-500 to-pink-500">
+            Exceptional
+          </span>{' '}
+          <br />
           Web Experiences
         </motion.h1>
 
-        {/* Typewriter Intro */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.7, delay: 0.3 }}
-          className="text-lg md:text-xl text-slate-400 max-w-2xl mx-auto mb-10 leading-relaxed"
+        {/* Value Proposition */}
+        <motion.p
+          initial={{ opacity: 0, y: 15 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7, delay: 0.2 }}
+          className="text-base sm:text-lg md:text-xl text-slate-400 max-w-2xl mx-auto mb-6 leading-relaxed"
         >
-          <span className="text-white font-medium">Hi, I’m Haroon, </span>
+          <span className="text-white font-medium">Hi, I’m Haroon,</span>{' '}
           <TypeAnimation
             sequence={[
-              'a Full-Stack Developer.',
+              ' a Full-Stack Developer.',
               2000,
-              'specializing in React & modern web technologies.',
+              ' specializing in MERN Stack & modern web technologies.',
               2000,
-              'focused on building scalable, high-performance digital experiences.',
+              ' focused on building scalable, high-performance web apps.',
               2000,
             ]}
             wrapper="span"
@@ -63,7 +67,17 @@ const Hero: React.FC = () => {
             repeat={Infinity}
             style={{ display: 'inline-block' }}
           />
-        </motion.div>
+        </motion.p>
+
+        {/* Client Value Line */}
+        <motion.p
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7, delay: 0.4 }}
+          className="text-slate-400 max-w-lg mx-auto mb-10"
+        >
+          I build websites that not only look great but also drive results for your business.
+        </motion.p>
 
         {/* Call-to-Action Buttons */}
         <motion.div
@@ -87,12 +101,12 @@ const Hero: React.FC = () => {
           </a>
         </motion.div>
 
-        {/* Floating Code Snippet Card */}
+        {/* Floating Code Snippet */}
         <motion.div
           initial={{ opacity: 0, y: 30, scale: 0.9 }}
           animate={{ opacity: 1, y: 0, scale: 1 }}
           transition={{ duration: 1, delay: 0.7, type: 'spring', stiffness: 100 }}
-          className="mt-16 mx-auto max-w-2xl bg-[#1e293b]/50 border border-white/5 rounded-2xl p-6 backdrop-blur-xl shadow-2xl hidden md:block hover:scale-105 transition-transform"
+          className="mt-8 md:mt-12 mx-auto max-w-2xl bg-[#1e293b]/50 border border-white/5 rounded-2xl p-6 backdrop-blur-xl shadow-2xl hidden md:block hover:scale-105 transition-transform"
         >
           <div className="flex items-center space-x-2 mb-4">
             <div className="w-3 h-3 rounded-full bg-red-500/50" />
@@ -112,6 +126,37 @@ const Hero: React.FC = () => {
             </code>
           </pre>
         </motion.div>
+        {/* Mobile version */}
+<motion.div
+  initial={{ opacity: 0, y: 20 }}
+  animate={{ opacity: 1, y: 0 }}
+  transition={{ duration: 0.8, delay: 0.7 }}
+  className="mt-8 mx-auto w-full max-w-sm bg-[#1e293b]/70 border border-white/10 rounded-2xl p-5 backdrop-blur-lg shadow-xl md:hidden"
+>
+  {/* Top “window buttons” for style */}
+  <div className="flex items-center space-x-2 mb-3">
+    <div className="w-3 h-3 rounded-full bg-red-500" />
+    <div className="w-3 h-3 rounded-full bg-yellow-400" />
+    <div className="w-3 h-3 rounded-full bg-green-500" />
+  </div>
+
+  {/* Code content */}
+  <pre className="text-left font-mono text-sm sm:text-base text-slate-200 leading-relaxed">
+    <code>
+      <span className="text-purple-400">const </span>dev = {'{'}
+      <br />
+      &nbsp;&nbsp;name: <span className="text-emerald-400">'Haroon'</span>,
+      <br />
+      &nbsp;&nbsp;focus: <span className="text-emerald-400">'Frontend Architecture'</span>,
+      <br />
+      &nbsp;&nbsp;learning: <span className="text-emerald-400">'MERN Stack'</span>,
+      <br />
+      &nbsp;&nbsp;motto: <span className="text-emerald-400">'Clean code, happy users'</span>
+      <br />
+      {'};'}
+    </code>
+  </pre>
+</motion.div>
       </div>
     </section>
   );
