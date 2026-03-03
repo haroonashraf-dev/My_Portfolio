@@ -5,7 +5,7 @@ import { TypeAnimation } from 'react-type-animation';
 
 const Hero: React.FC = () => {
   return (
-    <section className="relative min-h-screen flex flex-col items-center justify-center pt-24 overflow-hidden bg-slate-900">
+   <section className="relative min-h-[80vh] md:min-h-screen flex flex-col items-center justify-center pt-16 md:pt-24 overflow-hidden bg-slate-900">
       {/* Background Decorative Blobs */}
       <motion.div
         animate={{ rotate: 360 }}
