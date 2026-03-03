@@ -79,7 +79,7 @@ const About: React.FC = () => {
             </div>
 
             {/* Experience Card */}
-            <div className="absolute -bottom-6 -left-6 md:-left-12 bg-[#1e293b] border border-white/10 p-6 rounded-2xl shadow-2xl">
+            <div className="absolute -bottom-4 -left-4 sm:-bottom-6 sm:-left-6 md:-left-12 bg-[#1e293b] border border-white/10 p-3 sm:p-4 md:p-6 rounded-xl sm:rounded-2xl shadow-2xl">
               <div className="text-4xl font-bold gradient-text">2+</div>
               <div className="text-sm text-slate-400 font-medium">
                 Years Freelancing
@@ -87,7 +87,7 @@ const About: React.FC = () => {
             </div>
 
             {/* Project Card */}
-            <div className="absolute -top-6 -right-6 md:-right-12 bg-[#1e293b] border border-white/10 p-6 rounded-2xl shadow-2xl">
+           <div className="absolute -top-4 -right-4 sm:-top-6 sm:-right-6 md:-right-12 bg-[#1e293b] border border-white/10 p-3 sm:p-4 md:p-6 rounded-xl sm:rounded-2xl shadow-2xl">
               <div className="text-4xl font-bold gradient-text">20+</div>
               <div className="text-sm text-slate-400 font-medium">
                 Projects Delivered
