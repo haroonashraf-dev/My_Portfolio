@@ -27,44 +27,60 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
 
   return (
     <div className="min-h-screen">
-      <nav 
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-          isScrolled ? 'bg-[#0f172a]/80 backdrop-blur-md border-b border-white/10 py-3' : 'bg-transparent py-6'
-        }`}
+     <nav
+  className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
+    isScrolled
+      ? "bg-[#0f172a]/70 backdrop-blur-xl border-b border-white/10 py-3"
+      : "bg-transparent py-6"
+  }`}
+>
+  <div className="max-w-7xl mx-auto px-4 md:px-8 flex items-center justify-between">
+    
+    {/* Logo */}
+    <motion.a
+      href="#"
+      whileHover={{ scale: 1.05 }}
+      className="text-2xl font-bold gradient-text tracking-tighter"
+    >
+      HAROON.DEV
+    </motion.a>
+
+    {/* Desktop Nav */}
+    <div className="hidden md:flex items-center space-x-10">
+      {navLinks.map((link) => (
+        <motion.a
+          key={link.name}
+          href={link.href}
+          whileHover={{ y: -2 }}
+          className="relative text-sm font-medium text-slate-400 hover:text-white transition-colors group"
+        >
+          {link.name}
+          <span className="absolute left-0 -bottom-1 w-0 h-[2px] bg-indigo-500 transition-all duration-300 group-hover:w-full" />
+        </motion.a>
+      ))}
+
+      <motion.a
+        href="#contact"
+        whileHover={{ scale: 1.05 }}
+        whileTap={{ scale: 0.95 }}
+        className="px-6 py-2.5 rounded-full bg-indigo-600 text-white text-sm font-semibold shadow-lg shadow-indigo-500/20"
       >
-        <div className="max-w-7xl mx-auto px-4 md:px-8 flex items-center justify-between">
-          <a href="#" className="text-2xl font-bold gradient-text tracking-tighter">
-            HAROON.DEV
-          </a>
+        Hire Me
+      </motion.a>
+    </div>
 
-          {/* Desktop Nav */}
-          <div className="hidden md:flex items-center space-x-8">
-            {navLinks.map((link) => (
-              <a 
-                key={link.name} 
-                href={link.href}
-                className="text-sm font-medium text-slate-400 hover:text-white transition-colors"
-              >
-                {link.name}
-              </a>
-            ))}
-            <a 
-              href="#contact" 
-              className="px-5 py-2.5 rounded-full bg-indigo-600 hover:bg-indigo-500 text-white text-sm font-semibold transition-all shadow-lg shadow-indigo-500/20"
-            >
-              Hire Me
-            </a>
-          </div>
-
-          {/* Mobile Toggle */}
-          <button 
-            className="md:hidden text-slate-400"
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
-          >
-            {isMenuOpen ? <X /> : <Menu />}
-          </button>
-        </div>
-      </nav>
+    {/* Mobile Toggle */}
+    <motion.button
+      whileTap={{ scale: 0.9 }}
+      animate={{ rotate: isMenuOpen ? 90 : 0 }}
+      transition={{ duration: 0.3 }}
+      className="md:hidden text-slate-300"
+      onClick={() => setIsMenuOpen(!isMenuOpen)}
+    >
+      {isMenuOpen ? <X size={26} /> : <Menu size={26} />}
+    </motion.button>
+  </div>
+</nav>
 
       {/* Mobile Menu */}
       <AnimatePresence>
