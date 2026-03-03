@@ -91,7 +91,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
                 className="w-full py-4 rounded-xl bg-indigo-600 text-white text-center font-bold"
                 onClick={() => setIsMenuOpen(false)}
               >
-                Let's Talk
+                Hire Me
               </a>
             </div>
           </motion.div>
