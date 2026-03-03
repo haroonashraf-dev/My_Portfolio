@@ -88,7 +88,7 @@ const About: React.FC = () => {
 
             {/* Project Card */}
             <div className="absolute -top-6 -right-6 md:-right-12 bg-[#1e293b] border border-white/10 p-6 rounded-2xl shadow-2xl">
-              <div className="text-4xl font-bold gradient-text">30+</div>
+              <div className="text-4xl font-bold gradient-text">20+</div>
               <div className="text-sm text-slate-400 font-medium">
                 Projects Delivered
               </div>
