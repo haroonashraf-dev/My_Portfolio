@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { User, Rocket, Award } from "lucide-react";
-
+import ProfilePhoto from "./img/profile-photo.jpeg";
 const About: React.FC = () => {
   return (
     <section id="about" className="py-24 relative overflow-hidden">
@@ -70,8 +70,8 @@ const About: React.FC = () => {
           >
             <div className="aspect-square rounded-3xl overflow-hidden border border-white/10 p-2">
               <div className="w-full h-full rounded-2xl overflow-hidden grayscale hover:grayscale-0 transition-all duration-700">
-          <img
-  src="/img/profile-photo.jpeg"
+             <img
+  src={ProfilePhoto}
   alt="Haroon Portrait"
   className="w-full h-full object-cover rotate-90 py-10"
 />
