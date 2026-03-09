@@ -12,9 +12,9 @@ const skills: Skill[] = [
   { name: 'Express', category: 'backend', level: 55 },
   { name: 'MongoDB', category: 'backend', level: 50 },
   { name: 'Git & GitHub', category: 'tools', level: 85 },
-  { name: 'Figma', category: 'tools', level: 70 },
-  { name: 'Redux', category: 'frontend', level: 75 },
-  { name: 'Ai Integration', category: 'learning', level: 30 },
+  { name: 'Figma', category: 'tools', level: 75 },
+  { name: 'Redux', category: 'frontend', level: 70 },
+  { name: 'Search Engine Optimization (SEO)', category: 'learning', level: 30 },
 ];
 
 const Skills: React.FC = () => {
