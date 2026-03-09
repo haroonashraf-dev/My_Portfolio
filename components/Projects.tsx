@@ -11,9 +11,9 @@ const projects: Project[] = [
     description:
       "A modern fashion e-commerce platform designed for growing clothing brands. Built with a clean UI, optimized product browsing, responsive layout, and smooth user interactions for an enhanced shopping experience.",
     image:
-      "https://images.unsplash.com/photo-1521334884684-d80222895322?auto=format&fit=crop&q=80&w=1400",
+      "https://plus.unsplash.com/premium_photo-1664475347754-f633cb166d13?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     tags: ["React", "Tailwind CSS", "Framer Motion"],
-    link: "#",
+    link: "https://stackblitz.com/edit/react-trendwave-demo?file=src/App.js",
     details: "/fashion-details",
   },
   {
@@ -62,9 +62,8 @@ const Projects: React.FC = () => {
             <h3 className="text-3xl md:text-5xl font-bold">Latest Projects</h3>
           </div>
           <p className="text-slate-400 max-w-md">
-            A selection of my best work, highlighting performance, usability,
-            and design that impresses clients.
-          </p>
+  Showcasing my top projects with clean design, seamless performance, and intuitive user experiences.
+</p>
         </div>
 
         {/* Project Grid */}

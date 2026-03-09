@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Code2, Palette, Globe, Smartphone, Zap, Server } from 'lucide-react';
+import { Code2, Palette, Globe, Smartphone, Zap, Server, Monitor } from 'lucide-react';
 import { Service } from '../types';
 
 const services: Service[] = [
@@ -15,7 +15,7 @@ const services: Service[] = [
     id: '2',
     title: 'Modern UI/UX Implementation',
     description: 'Transforming designs into living, breathing interfaces with Tailwind CSS and Framer Motion.',
-    icon: 'palette'
+    icon: 'monitor'
   },
   {
     id: '3',
@@ -29,28 +29,30 @@ const services: Service[] = [
     description: 'Ensuring your application looks and functions perfectly on every device, from mobile to ultra-wide.',
     icon: 'smartphone'
   },
-  {
-    id: '5',
-    title: 'Web Optimization',
-    description: 'Speed matters. I optimize assets and code to ensure lightning-fast load times and high Core Web Vitals.',
-    icon: 'zap'
-  },
-  {
-    id: '6',
-    title: 'SEO Implementation',
-    description: 'Best practices for accessibility and search engine visibility from the ground up.',
-    icon: 'globe'
-  }
+ {
+  id: '5',
+  title: 'Figma Design',
+  description: 'Modern UI/UX design using Figma. I create clean, responsive layouts and design systems ready for development.',
+  icon: 'palette'
+},
+{
+  id: '6',
+  title: 'WordPress Development',
+  description: 'Custom WordPress websites with responsive design, performance optimization, and easy content management.',
+  icon: 'globe'
+}
 ];
 
-const IconMap: Record<string, any> = {
+const IconMap: Record<string, React.ElementType> = {
   code: Code2,
   palette: Palette,
   server: Server,
   smartphone: Smartphone,
   zap: Zap,
-  globe: Globe
+  globe: Globe,
+  monitor: Monitor
 };
+
 
 const Services: React.FC = () => {
   return (
