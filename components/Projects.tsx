@@ -24,7 +24,7 @@ const projects: Project[] = [
     image:
       "https://images.unsplash.com/photo-1501504905252-473c47e087f8?auto=format&fit=crop&q=80&w=1400",
     tags: ["Next.js", "TypeScript", "Shadcn UI"],
-    link: "#",
+    link: "https://lms-wqmc.vercel.app/",
     details: "/lms-details",
   },
   {
