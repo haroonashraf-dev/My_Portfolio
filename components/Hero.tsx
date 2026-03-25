@@ -94,7 +94,7 @@ const Hero: React.FC = () => {
             <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" size={18} />
           </a>
           <a
-            href="#contact"
+            href="https://api.whatsapp.com/send?phone=923137386619&text=Hello%20Haroon%20I%20visited%20your%20portfolio%20and%20I%20would%20like%20to%20discuss%20a%20project."
             className="px-8 py-4 bg-slate-800 hover:bg-slate-700 text-white border border-slate-700 rounded-xl font-bold transition-all"
           >
             Contact Me
