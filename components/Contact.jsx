@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import { Send, MapPin, Mail } from 'lucide-react';
 import emailjs from '@emailjs/browser';
 
-const Contact: React.FC = () => {
+const Contact = () => {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -12,16 +12,16 @@ const Contact: React.FC = () => {
 
   const [loading, setLoading] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
     setLoading(true);
 
     emailjs
       .send(
-        'service_y5e7nnd',     // 🔁 Service_Id
-        'template_73gc59l',    // 🔁 Template_Id
+        'service_y5e7nnd',
+        'template_73gc59l',
         formData,
-        '_sJcsQDbJTLj1WYH2'      // 🔁 Public_Key
+        '_sJcsQDbJTLj1WYH2'
       )
       .then(() => {
         alert('Message sent successfully!');

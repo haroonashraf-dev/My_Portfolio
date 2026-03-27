@@ -10,12 +10,12 @@ import Projects from './components/Projects';
 import Contact from './components/Contact';
 import WhatsAppButton from './components/WhatsAppButton';
 
-import ScrollToTop from './components//ScrollToTop';
+import ScrollToTop from './components/ScrollToTop';
 import LmsDetails from './components/LmsDetails';
 import FashionDetails from './components/FashionDetails';
 import DashboardDetails from './components/DashboardDetails';
 
-const App: React.FC = () => {
+const App = () => {
   return (
     <Router>
       <ScrollToTop /> 

@@ -23,7 +23,7 @@ const WhatsAppButton = () => {
 
   {/* Hide text on small screens */}
   <span className="hidden md:inline text-sm font-semibold ml-2">
-    Let’s Talk
+    Chat on WhatsApp
   </span>
 </a>
   );

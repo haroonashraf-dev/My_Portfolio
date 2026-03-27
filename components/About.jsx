@@ -2,7 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import { User, Rocket, Award } from "lucide-react";
 import ProfilePhoto from "./img/profile-photo.jpeg";
-const About: React.FC = () => {
+const About = () => {
   return (
     <section id="about" className="py-24 relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 md:px-8">

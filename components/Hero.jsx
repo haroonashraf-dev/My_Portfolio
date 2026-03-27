@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import { ArrowRight, Terminal } from 'lucide-react';
 import { TypeAnimation } from 'react-type-animation';
 
-const Hero: React.FC = () => {
+const Hero = () => {
   return (
     <section className="relative min-h-[80vh] md:min-h-screen flex flex-col items-center justify-center pt-16 md:pt-24 overflow-hidden bg-slate-900">
       {/* Background Blobs */}

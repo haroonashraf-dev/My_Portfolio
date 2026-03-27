@@ -3,11 +3,9 @@ import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X, Github, Linkedin, Twitter, Mail , Phone } from 'lucide-react';
 
-interface LayoutProps {
-  children: React.ReactNode;
-}
 
-const Layout: React.FC<LayoutProps> = ({ children }) => {
+
+const Layout = ({ children }) => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
