@@ -53,7 +53,7 @@ const IconMap = {
 
 const Services = () => {
   return (
-    <section id="services" className="py-24 bg-[#0f172a]">
+    <section id="services" className="py-18 bg-[#0f172a]">
       <div className="max-w-7xl mx-auto px-4 md:px-8 text-center">
         
         <h2 className="text-sm font-bold tracking-widest text-indigo-500 uppercase mb-4">
