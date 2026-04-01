@@ -6,13 +6,13 @@ import { Link } from "react-router-dom";
 const projects = [
   {
     id: "1",
-    title: "TrendWave Store",
+    title: "Revenue-Focused Fashion Store for Small Brands",
     description:
-      "A modern fashion e-commerce platform designed for growing clothing brands. Built with a clean UI, optimized product browsing, responsive layout, and smooth user interactions for an enhanced shopping experience.",
+      "A revenue-focused fashion e-commerce platform built to help small clothing brands increase sales, improve user experience, and convert visitors into customers.Includes real-world business features like quick add-to-cart, stock urgency indicator, optimized checkout flow, and WhatsApp ordering — making it ideal for brands.",
     image:
       "https://plus.unsplash.com/premium_photo-1664475347754-f633cb166d13?q=80&w=870&auto=format&fit=crop",
     tags: ["React", "Tailwind CSS", "Framer Motion"],
-    link: "https://stackblitz.com/edit/react-trendwave-demo?file=src/App.js",
+    link: "https://trendwave-store.vercel.app/",
     details: "/fashion-details",
   },
   {
