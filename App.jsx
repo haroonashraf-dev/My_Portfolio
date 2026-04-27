@@ -11,9 +11,7 @@ import Contact from './components/Contact';
 import WhatsAppButton from './components/WhatsAppButton';
 
 import ScrollToTop from './components/ScrollToTop';
-import LmsDetails from './components/LmsDetails';
-import FashionDetails from './components/FashionDetails';
-import DashboardDetails from './components/DashboardDetails';
+
 
 const App = () => {
   return (
@@ -37,10 +35,7 @@ const App = () => {
             }
           />
 
-          {/* Project Details Pages */}
-          <Route path="/lms-details" element={<LmsDetails />} />
-          <Route path="/fashion-details" element={<FashionDetails />} />
-          <Route path="/dashboard-details" element={<DashboardDetails />} />
+         
         </Routes>
       </Layout>
 

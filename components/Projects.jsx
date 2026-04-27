@@ -1,33 +1,52 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { ExternalLink, FileText } from "lucide-react";
+import { ExternalLink } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const projects = [
   {
     id: "1",
+    title: "Discover the New You with Faiza's Beauty Salon",
+    description:
+      "Step into a realm where beauty meets luxury and each detail is accomplished with accuracy and love. At Faiza's Salon, the most reliable ladies salon, we combine the two elements (science & art) to reveal your authentic beauty. Our team of skilled professionals is dedicated to providing personalized services that enhance your natural features and boost your confidence.",
+    image:
+      "https://bloomandblossom.ae/wp-content/uploads/2026/03/Nano-Banana-2-A-professional-salon-scene-featuring-a-beautiful-woman-with-flawless_-glowing-skin-rec_2-1.png",
+    tags: ["React", "Tailwind CSS", "Framer Motion"],
+    link: "https://faiza-s-beauty-salon.vercel.app/",
+  },
+ 
+  {
+    id: "2",
     title: "Revenue-Focused Fashion Store for Small Brands",
     description:
       "A revenue-focused fashion e-commerce platform built to help small clothing brands increase sales, improve user experience, and convert visitors into customers.Includes real-world business features like quick add-to-cart, stock urgency indicator, optimized checkout flow, and WhatsApp ordering — making it ideal for brands.",
     image:
       "https://plus.unsplash.com/premium_photo-1664475347754-f633cb166d13?q=80&w=870&auto=format&fit=crop",
-    tags: ["React", "Tailwind CSS", "Framer Motion"],
+    tags: ["React","JavaScript", "Tailwind CSS", "Framer Motion"],
     link: "https://trendwave-store.vercel.app/",
-    details: "/fashion-details",
-  },
-  {
-    id: "2",
-    title: "E-Learning Hub (Full-Stack SaaS)",
-    description:
-      "A scalable LMS that allows instructors to create and monetize courses, while students enjoy a seamless learning experience.",
-    image:
-      "https://images.unsplash.com/photo-1501504905252-473c47e087f8?auto=format&fit=crop&q=80&w=1400",
-    tags: ["Next.js", "TypeScript", "Shadcn UI"],
-    link: "https://lms-wqmc.vercel.app/",
-    details: "/lms-details",
   },
   {
     id: "3",
+    title: "E-Learning Hub (Full-Stack SaaS)",
+    description:
+      "A scalable LMS that allows instructors to create and monetize courses, while students enjoy a seamless learning experience.E-Learning Hub is a Learning Management System (LMS) which is a web-based platform designed to facilitate online education by providing an interactive and user-friendly environment for learners and instructors,  where students, instructors can collaborate seamlessly ",
+    image:
+      "https://images.unsplash.com/photo-1501504905252-473c47e087f8?auto=format&fit=crop&q=80&w=1400",
+    tags: ["React", "Tailwind CSS", "Framer Motion", "Node.js", "Express", "MongoDB", "Shadcn UI"],
+    link: "https://lms-wqmc.vercel.app/",
+  },
+   {
+    id: "4",
+    title: "Raising the Standard in Goat Farming",
+    description:
+      "Raising healthy, happy goats with passion and care to provide the very best for our community. At Bukhari Farm, we are dedicated to the art of goat farming, combining traditional practices with modern techniques to ensure the well-being of our animals and the quality of our products. We provide to the comfortable living conditions we maintain.",
+    image:
+      "https://images.unsplash.com/photo-1524024973431-2ad916746881?auto=format&fit=crop&q=80&w=2000",
+    tags: ["React", "Tailwind CSS", "Framer Motion" , "Node.js", "Express", "MongoDB"],
+    link: "https://bukhari-farm.vercel.app/",
+  },
+  {
+    id: "5",
     title: "InsightBoard – Admin Analytics Dashboard",
     description:
       "A professional SaaS analytics dashboard designed for administrators to monitor performance metrics, user activity, and business insights.",
@@ -35,7 +54,6 @@ const projects = [
       "https://images.unsplash.com/photo-1553877522-43269d4ea984?auto=format&fit=crop&q=80&w=1400",
     tags: ["React", "CSS Modules", "Chart.js"],
     link: "#",
-    details: "/dashboard-details",
   },
 ];
 
@@ -103,15 +121,7 @@ const Projects = () => {
                     Preview
                   </a>
 
-                  {project.details && (
-                    <Link
-                      to={project.details}
-                      className="flex items-center gap-2 px-4 py-2 border border-white text-white rounded-full font-semibold hover:bg-white hover:text-black transition"
-                    >
-                      <FileText size={16} />
-                      Case Study
-                    </Link>
-                  )}
+                  
                 </div>
               </div>
 
