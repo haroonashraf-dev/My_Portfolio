@@ -6,6 +6,16 @@ import { Link } from "react-router-dom";
 const projects = [
   {
     id: "1",
+    title: "CURATED SMART FINDS, ELEVATING YOUR LIFESTYLE",
+    description:
+      "Premium gadgets and home innovations verified by experts.Get the best smart tech, hand-picked for quality and performance. Shop with confidence and elevate your lifestyle with our exclusive collection of smart living finds.",
+    image:
+      "https://images.unsplash.com/photo-1550009158-9ebf69173e03?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
+    tags: ["React", "Tailwind CSS", "Framer Motion"],
+    link: "https://smart-living-finds.vercel.app/",
+  },
+  {
+    id: "2",
     title: "Discover the New You with Faiza's Beauty Salon",
     description:
       "Step into a realm where beauty meets luxury and each detail is accomplished with accuracy and love. At Faiza's Salon, the most reliable ladies salon, we combine the two elements (science & art) to reveal your authentic beauty. Our team of skilled professionals is dedicated to providing personalized services that enhance your natural features and boost your confidence.",
@@ -16,7 +26,7 @@ const projects = [
   },
  
   {
-    id: "2",
+    id: "3",
     title: "Revenue-Focused Fashion Store for Small Brands",
     description:
       "A revenue-focused fashion e-commerce platform built to help small clothing brands increase sales, improve user experience, and convert visitors into customers.Includes real-world business features like quick add-to-cart, stock urgency indicator, optimized checkout flow, and WhatsApp ordering — making it ideal for brands.",
@@ -26,7 +36,7 @@ const projects = [
     link: "https://trendwave-store.vercel.app/",
   },
   {
-    id: "3",
+    id: "4",
     title: "E-Learning Hub (Full-Stack SaaS)",
     description:
       "A scalable LMS that allows instructors to create and monetize courses, while students enjoy a seamless learning experience.E-Learning Hub is a Learning Management System (LMS) which is a web-based platform designed to facilitate online education by providing an interactive and user-friendly environment for learners and instructors,  where students, instructors can collaborate seamlessly ",
@@ -36,7 +46,7 @@ const projects = [
     link: "https://lms-wqmc.vercel.app/",
   },
    {
-    id: "4",
+    id: "5",
     title: "Raising the Standard in Goat Farming",
     description:
       "Raising healthy, happy goats with passion and care to provide the very best for our community. At Bukhari Farm, we are dedicated to the art of goat farming, combining traditional practices with modern techniques to ensure the well-being of our animals and the quality of our products. We provide to the comfortable living conditions we maintain.",
@@ -46,7 +56,7 @@ const projects = [
     link: "https://bukhari-farm.vercel.app/",
   },
   {
-    id: "5",
+    id: "6",
     title: "InsightBoard – Admin Analytics Dashboard",
     description:
       "A professional SaaS analytics dashboard designed for administrators to monitor performance metrics, user activity, and business insights.",
