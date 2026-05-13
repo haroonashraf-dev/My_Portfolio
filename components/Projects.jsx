@@ -8,11 +8,11 @@ const projects = [
     id: "1",
     title: "CURATED SMART FINDS, ELEVATING YOUR LIFESTYLE",
     description:
-      "Premium gadgets and home innovations verified by experts.Get the best smart tech, hand-picked for quality and performance. Shop with confidence and elevate your lifestyle with our exclusive collection of smart living finds.",
+      "Premium gadgets and home innovations verified by experts.Get the best smart tech, hand-picked for quality and performance. Shop with confidence and elevate your lifestyle with our exclusive collection of smart living finds",
     image:
       "https://images.unsplash.com/photo-1550009158-9ebf69173e03?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
     tags: ["React", "Tailwind CSS", "Framer Motion"],
-    link: "https://smart-living-finds.vercel.app/",
+    link: "https://smart-finds.vercel.app/",
   },
   {
     id: "2",
