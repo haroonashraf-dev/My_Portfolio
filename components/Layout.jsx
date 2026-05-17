@@ -63,7 +63,7 @@ const Layout = ({ children }) => {
         whileTap={{ scale: 0.95 }}
         className="px-6 py-2.5 rounded-full bg-indigo-600 text-white text-sm font-semibold shadow-lg shadow-indigo-500/20"
       >
-        Hire Me
+        Connect Me
       </motion.a>
     </div>
 
