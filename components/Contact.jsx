@@ -101,10 +101,11 @@ const Contact = () => {
             <form onSubmit={handleSubmit} className="space-y-6">
 
               <div className="space-y-2">
-                <label className="text-sm font-semibold text-slate-300 ml-1">
+                <label htmlFor="fullName" className="text-sm font-semibold text-slate-300 ml-1">
                   Full Name
                 </label>
                 <input
+                  id="fullName"
                   type="text"
                   required
                   value={formData.name}
@@ -117,10 +118,11 @@ const Contact = () => {
               </div>
 
               <div className="space-y-2">
-                <label className="text-sm font-semibold text-slate-300 ml-1">
+                <label htmlFor="emailAddress" className="text-sm font-semibold text-slate-300 ml-1">
                   Email Address
                 </label>
                 <input
+                  id="emailAddress"
                   type="email"
                   required
                   value={formData.email}
@@ -133,10 +135,11 @@ const Contact = () => {
               </div>
 
               <div className="space-y-2">
-                <label className="text-sm font-semibold text-slate-300 ml-1">
+                <label htmlFor="message" className="text-sm font-semibold text-slate-300 ml-1">
                   Message
                 </label>
                 <textarea
+                  id="message"
                   required
                   rows={4}
                   value={formData.message}

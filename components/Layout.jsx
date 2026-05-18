@@ -69,6 +69,7 @@ const Layout = ({ children }) => {
 
     {/* Mobile Toggle */}
     <motion.button
+      aria-label="Toggle menu"
       whileTap={{ scale: 0.9 }}
       animate={{ rotate: isMenuOpen ? 90 : 0 }}
       transition={{ duration: 0.3 }}
@@ -127,9 +128,9 @@ const Layout = ({ children }) => {
             <div>
               <h4 className="font-bold mb-4">Socials</h4>
               <div className="flex space-x-4">
-                <a href="https://github.com/haroonashraf-dev?tab=repositories" className="p-2 bg-slate-800 rounded-lg hover:bg-slate-700 transition-colors"><Github size={20} /></a>
-                <a href="#" className="p-2 bg-slate-800 rounded-lg hover:bg-slate-700 transition-colors"><Linkedin size={20} /></a>
-                <a href="#" className="p-2 bg-slate-800 rounded-lg hover:bg-slate-700 transition-colors"><Twitter size={20} /></a>
+                <a href="https://github.com/haroonashraf-dev?tab=repositories" target="_blank" rel="noopener noreferrer" aria-label="GitHub" className="p-2 bg-slate-800 rounded-lg hover:bg-slate-700 transition-colors"><Github size={20} /></a>
+                <a href="#" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="p-2 bg-slate-800 rounded-lg hover:bg-slate-700 transition-colors"><Linkedin size={20} /></a>
+                <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Twitter" className="p-2 bg-slate-800 rounded-lg hover:bg-slate-700 transition-colors"><Twitter size={20} /></a>
               </div>
             </div>
            <div>

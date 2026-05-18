@@ -50,7 +50,7 @@ const Hero = () => {
           initial={{ opacity: 0, y: 15 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.2 }}
-          className="text-base sm:text-lg md:text-xl text-slate-400 max-w-2xl mx-auto mb-6 leading-relaxed"
+          className="text-base sm:text-lg md:text-xl text-slate-400 max-w-2xl mx-auto mb-6 leading-relaxed min-h-[80px] sm:min-h-[60px]"
         >
           <span className="text-white font-medium">Hi, I’m Haroon,</span>{' '}
           <TypeAnimation
